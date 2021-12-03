@@ -5,7 +5,7 @@ import './App.css';
 import { Rutas } from './Rutas.js'
 import { BrowserRouter } from 'react-router-dom';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <Fragment>
@@ -18,5 +18,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Login } from './componentes/Login/Login';
-import { Registro } from './componentes/Registro/Registro';
-import { Contactanos } from './componentes/Contactanos/Contactanos';
-import { Servicios } from './componentes/Servicios/Servicios';
+import { Login } from './componentes/Login/Login.jsx';
+import { Registro } from './componentes/Registro/Registro.jsx';
+import { Contactanos } from './componentes/Contactanos/Contactanos.jsx';
+import { Servicios } from './componentes/Servicios/Servicios.jsx';
 
 export function Rutas() {
     return (
