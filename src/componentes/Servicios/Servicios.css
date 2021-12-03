@@ -1,0 +1,18 @@
+.contenedor{
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    width: 45rem;
+}
+
+.carruselservicios{
+    height: 39rem;
+}
+
+.img1{
+    height: 38rem;
+}
+
+.textcarusel{
+    font-size: 2rem;
+    color:black;
+}

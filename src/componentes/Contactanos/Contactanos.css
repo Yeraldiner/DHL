@@ -1,0 +1,29 @@
+.cardcontactanos{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    height: 100%;
+    width: 50%;
+    margin:auto;
+    background: rgb(95,43,156);
+background: radial-gradient(circle, rgba(95,43,156,1) 17%, rgba(36,33,37,0.8715861344537815) 80%);
+}
+
+.logo{
+    height: 15rem;
+}
+
+.titulocard{
+    font-size: 3rem;
+    color:white
+}
+
+.textcard{
+    font-size: 1.5rem;
+    color:white;
+    text-align: center;
+}
+
+.logosredes{
+    text-align:center;
+    color:white;
+}

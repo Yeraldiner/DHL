@@ -1,23 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 3rem; 
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+body{
+    background: rgb(21,45,138);
+    background: linear-gradient(153deg, rgba(21,45,138,1) 0%, rgba(33,123,177,1) 20%, rgba(42,111,172,1) 29%, rgba(116,121,204,1) 39%, rgba(90,49,148,1) 56%);
 }
