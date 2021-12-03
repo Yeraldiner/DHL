@@ -1,11 +1,11 @@
 .contenedor{
     padding-top: 6rem;
     padding-bottom: 4rem;
-    width: 45rem;
+    width: 80% ;
 }
 
 .carruselservicios{
-    height: 39rem;
+    height: 38rem;
 }
 
 .img1{
@@ -15,4 +15,8 @@
 .textcarusel{
     font-size: 2rem;
     color:black;
+}
+
+.textcarusel1{
+    color:rgb(10, 25, 66);
 }
