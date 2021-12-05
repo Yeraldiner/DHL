@@ -1,4 +1,5 @@
 function validar(nombres, apellidos, numerodocumento, correo, usuario, contraseña, confirmarcontraseña,chequeado){
+    
     let sw = true
 
     if (nombres.length < 6) {
@@ -31,12 +32,12 @@ function validar(nombres, apellidos, numerodocumento, correo, usuario, contrase�
         sw = false
     }
 
-    if (contraseña!==confirmarcontraseña){
+    if (contraseña !== confirmarcontraseña){
         alert("los contraseñas inscritas son distintas en ambos campos")
         sw= false
     }
 
-     if (chequeado!== true){
+    if (chequeado!== true){
         alert("Debe aceptar el check de tratamiento de datos")
         sw= false
     }

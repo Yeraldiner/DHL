@@ -15,7 +15,7 @@ export function Registro() {
 
     const registrarse = () => {
         const nombres = nombresRef.current.value;
-        const apellidos = apellidosRef.current.value;contraseñaRef.current.value = "";
+        const apellidos = apellidosRef.current.value;
         const documento = documentoRef.current.value;
         const numerodocumento = numerodocumentoRef.current.value;
         const correo = correoRef.current.value;
@@ -67,7 +67,7 @@ export function Registro() {
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Contraseña</label>
-                    <input ref={contraseñaRef}type="password" className="form-control" placeholder="Contraseña"/>
+                    <input ref={contraseñaRef} type="password" className="form-control" placeholder="Contraseña"/>
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Confirmar contraseña</label>
