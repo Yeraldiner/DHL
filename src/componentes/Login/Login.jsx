@@ -1,9 +1,26 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import envio from '../../img/envio.png';
 import { Link } from 'react-router-dom';
 import './Login.css'
+import {login, recuperar} from './LoginService.js'
 
 export function Login() {
+  const usuarioRef = useRef();
+  const contraseñaRef = useRef();
+  const correoRef = useRef();
+  const logearse= ()=>{
+    const usuario = usuarioRef.current.value;
+    const contraseña = contraseñaRef.current.value;
+    login(usuario,contraseña);
+    usuarioRef.current.value = "";
+    contraseñaRef.current.value = "";
+  };
+
+  const recuperarContraseña= ()=>{
+    const correo = correoRef.current.value;
+    recuperar(correo);
+    correoRef.current.value ="";
+  }
   return (
     <main className="text-white main">
       <div className="container px-4 text-center">
@@ -18,23 +35,23 @@ export function Login() {
             <form>
               <h3 className="text-center">INGRESA</h3>
               <div className="form-group ">
-                <label htmlFor="exampleInputEmail1">Usuario:</label>
-                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                <label>Usuario:</label>
+                <input ref={usuarioRef} type="text" className="form-control"/>
               </div>
               <div className="form-group">
-                <label htmlFor="exampleInputPassword1">Contraseña:</label>
-                <input type="password" className="form-control" id="exampleInputPassword1" />
+                <label>Contraseña:</label>
+                <input ref={contraseñaRef} type="password" className="form-control"/>
                 <a className="form-text text-white enlacerecuperar" data-bs-toggle="modal" data-bs-target="#exampleModal">¿Olvidaste la contraseña?</a>
               </div>
               <div>
-                <button type="submit" className="btn btn-primary">Entrar</button>
+                <button type="button" className="btn btn-primary" onClick={logearse}>Entrar</button>
               </div>
             </form>
           </div>
           <div className="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img className="img-fluid rounded-3 my-5" src={envio} alt="..." /></div>
         </div>
       </div>
-      <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered ">
           <div className="modal-content modalrecuperar">
             <div className="modal-header headerrecuperar">
@@ -44,13 +61,13 @@ export function Login() {
             <div className="modal-body bodyrecuperar">
               <form>
                 <div className="mb-3">
-                  <label for="recipient-name" className="col-form-label">Correo electrónico:</label>
-                  <input type="text" className="form-control" id="recipient-name" />
+                  <label className="col-form-label">Correo electrónico:</label>
+                  <input ref={correoRef} type="email" className="form-control" />
                 </div>
               </form>
             </div>
             <div className="modal-footer footerrecuperar">
-              <button type="button" className="btn btn-primary">Recuperar</button>
+              <button type="button" className="btn btn-primary" onClick={recuperarContraseña}>Recuperar</button>
             </div>
           </div>
         </div>
