@@ -34,9 +34,9 @@ const FormSelectDepto = (props) => {
   return (
     <Fragment>
       <div className="col-sm form-group">
-        <label htmlFor={id}>{label}</label>
+        <label htmlFor={id} className="labelenvio">{label}</label>
         <select
-          className="form-select rounded-pill"
+          className="form-select rounded-pill selector"
           aria-label="Seleccionar"
           onChange={ShowSelected}
         >
@@ -45,9 +45,9 @@ const FormSelectDepto = (props) => {
         </select>
       </div>
       <div className="col-sm form-group">
-        <label htmlFor={id2}>{label2}</label>
+        <label htmlFor={id2} className="labelenvio">{label2}</label>
         <select
-          className="form-select rounded-pill"
+          className="form-select rounded-pill selector"
           aria-label="Seleccionar"
         >
           <option value="select">Seleccione {label2}...</option>

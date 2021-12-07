@@ -1,9 +1,9 @@
 import React from "react";
 import './Servicios.css'
-import pensando  from '../../img/pensando.png'
-import calendario  from '../../img/calendario.png'
-import medicion  from '../../img/medicion.png'
-import envio from '../../img/envio.png'
+import pensando  from '../../img/pensando.svg'
+import calendario  from '../../img/calendario.svg'
+import medicion  from '../../img/medicion.svg'
+import direccion from '../../img/direccion.svg'
 
 export function Servicios() {
     return (
@@ -26,8 +26,8 @@ export function Servicios() {
                     <div className="carousel-item">
                         <img src={calendario} className="d-block w-100 img1" alt="..." />
                         <div className="carousel-caption d-md-block">
-                            <h5 className="textcarusel">Agenda el día y el horario en el que podemos recoger tu paquete</h5>
-                            <p className="textcarusel1">Vamos a tu casa y hacemos el trabajo por ti, recuerda progamar los envíos con 24 horas de anticipación</p>
+                            <h5>Agenda el día y el horario en el que podemos recoger tu paquete</h5>
+                            <p>Vamos a tu casa y hacemos el trabajo por ti, recuerda progamar los envíos con 24 horas de anticipación</p>
                         </div>
                     </div>
                     <div className="carousel-item">
@@ -38,9 +38,9 @@ export function Servicios() {
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src={envio} className="d-block w-100 img1" alt="..." />
+                        <img src={direccion} className="d-block w-100 img1" alt="..." />
                         <div className="carousel-caption d-md-block">
-                            <h5 className="textcarusel">Sigue el envío desde tu celular</h5>
+                            <h5>Sigue el envío desde tu celular</h5>
                             <p>Puedes visualizar la trazabilidad de los envíos en curso</p>
                         </div>
                     </div>

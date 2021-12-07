@@ -1,25 +1,29 @@
-import React,{useRef} from 'react';
+import React, { useRef } from 'react';
 import envio from '../../img/envio.png';
 import { Link } from 'react-router-dom';
 import './Login.css'
-import {login, recuperar} from './LoginService.js'
+import { login, recuperar, validar, validarCorreo } from './LoginService.js'
 
 export function Login() {
   const usuarioRef = useRef();
   const contraseñaRef = useRef();
   const correoRef = useRef();
-  const logearse= ()=>{
+  const logearse = () => {
     const usuario = usuarioRef.current.value;
     const contraseña = contraseñaRef.current.value;
-    login(usuario,contraseña);
-    usuarioRef.current.value = "";
-    contraseñaRef.current.value = "";
+    if (validar(usuario, contraseña)) {
+      login(usuario, contraseña);
+      usuarioRef.current.value = "";
+      contraseñaRef.current.value = "";
+    }
   };
 
-  const recuperarContraseña= ()=>{
+  const recuperarContraseña = () => {
     const correo = correoRef.current.value;
-    recuperar(correo);
-    correoRef.current.value ="";
+    if (validarCorreo(correo)){
+      recuperar(correo);
+      correoRef.current.value = "";
+    }
   }
   return (
     <main className="text-white main">
@@ -33,18 +37,18 @@ export function Login() {
         <div className="row gx-5 align-items-center justify-content-center">
           <div className="col-lg-8 col-xl-7 col-xxl-6 cajalogin">
             <form>
-              <h3 className="text-center">INGRESA</h3>
+              <h3 className="text-center ingresa">INGRESA</h3>
               <div className="form-group ">
-                <label>Usuario:</label>
-                <input ref={usuarioRef} type="text" className="form-control"/>
+                <label className="textoslabel">Usuario:</label>
+                <input ref={usuarioRef} type="text" className="form-control" placeholder="Usuario"/>
               </div>
               <div className="form-group">
-                <label>Contraseña:</label>
-                <input ref={contraseñaRef} type="password" className="form-control"/>
-                <a className="form-text text-white enlacerecuperar" data-bs-toggle="modal" data-bs-target="#exampleModal">¿Olvidaste la contraseña?</a>
+                <label className="textoslabel">Contraseña:</label>
+                <input ref={contraseñaRef} type="password" className="form-control" placeholder="Contraseña"/>
+                <a className="form-text text-white enlacerecuperar textoslabel" data-bs-toggle="modal" data-bs-target="#exampleModal">¿Olvidaste la contraseña?</a>
               </div>
               <div>
-                <button type="button" className="btn btn-primary" onClick={logearse}>Entrar</button>
+                <button type="button" className="btn btn-primary textoslabel" onClick={logearse}>Entrar</button>
               </div>
             </form>
           </div>

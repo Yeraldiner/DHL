@@ -6,7 +6,7 @@ const FormGroup = (props) =>{
 
     return(
         <div className="col-sm form-group">
-          <label htmlFor={label}>{label}</label>
+          <label htmlFor={label} className="labelenvio">{label}</label>
           <input
             type={type}
             className="form-control rounded-pill"
