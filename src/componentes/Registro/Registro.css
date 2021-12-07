@@ -3,5 +3,31 @@
     margin-bottom: 3rem;
 }
 .selector{
-    width: 20%;
+    margin-left: 3rem;
+    width: 60%;
+    border-radius: 0.85rem ;
+    border: 1px solid #c00974;
+}
+
+.registrolabel{
+    color:ghostwhite;
+    margin-left: 3rem;
+}
+
+.textcheck{
+    color:ghostwhite;
+}
+
+.botonregistrarse{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contenedorregistro{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.form-control{
+    width: 60%;
 }
